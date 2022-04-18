@@ -1,24 +1,25 @@
-FROM php:7.4-fpm-buster
+FROM php:8.1-fpm-buster
 
 RUN echo "Acquire::http::Pipeline-Depth 0;" > /etc/apt/apt.conf.d/privet && echo "Acquire::http::No-Cache true;" >> /etc/apt/apt.conf.d/privet && echo "Acquire::BrokenProxy    true;" >> /etc/apt/apt.conf.d/privet
 
 RUN apt-get update
 
-RUN apt-get -qq install -y \
-    apt-utils \
-    git \
-    curl \
-    unzip \
-    vim \
-    nano \
-    libzip-dev \
-    libmcrypt-dev \
-    libicu-dev \
-    libxml2-dev libxslt1-dev \
-    libfreetype6-dev \
-    libjpeg62-turbo-dev \
-    mariadb-client \
-    mailutils \
+RUN  apt-get  install -y  apt-utils 
+RUN  apt-get  install -y  git 
+RUN  apt-get  install -y  curl 
+RUN  apt-get  install -y  unzip 
+RUN  apt-get  install -y  vim 
+RUN  apt-get  install -y  nano 
+RUN  apt-get  install -y    libzip-dev 
+RUN  apt-get  install -y   libmcrypt-dev 
+RUN  apt-get  install -y  libicu-dev 
+RUN  apt-get  install -y    libxml2-dev libxslt1-dev 
+RUN  apt-get  install -y   libfreetype6-dev 
+RUN  apt-get  install -y   libjpeg62-turbo-dev 
+RUN  apt-get  install -y    mariadb-client 
+RUN  apt-get  install -y    mailutils 
+RUN  apt-get  install -y    golang-go 
+
     golang-go \
     && docker-php-ext-configure hash --with-mhash \
     && docker-php-ext-configure gd --with-jpeg --with-freetype \
