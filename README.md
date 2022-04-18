@@ -1,8 +1,8 @@
-# Magento 2.4.x Docker + Xdebug(Phpstorm) + MailHog + Multiple Website + Blackfire + Redis/Redisinsight + Elasticsearch + Rabbitmq
+# Magento 2.4.4 PHP 8.1  Docker + Xdebug(Phpstorm) + MailHog + Multiple Website + Blackfire + Redis/Redisinsight + Elasticsearch + Rabbitmq
 
 Magento 2.4.x Docker Environment
 
-Services  : Nginx 1.14, PHP 7.4-fpm-buster, Mariadb 10.4
+Services  : Nginx 1.14, PHP 8.1-fpm-buster, Mariadb 10.4
 
 Tree
 ```
